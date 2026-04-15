@@ -1,18 +1,7 @@
-import OpenAI from "openai";
+import { providerFactory } from "./providers/ProviderFactory.js";
 
-let client = null;
-
-function getClient() {
-  if (!client) {
-    client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-  }
-  return client;
-}
-
-export async function getEmbedding(text) {
-  const res = await getClient().embeddings.create({
-    model: "text-embedding-3-small",
-    input: text
-  });
-  return res.data[0].embedding;
+export async function getEmbedding(text, providerId = "openai") {
+  await providerFactory.initialize();
+  const provider = providerFactory.getProvider(providerId);
+  return await provider.getEmbedding(text);
 }
