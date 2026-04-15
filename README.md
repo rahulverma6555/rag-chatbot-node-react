@@ -66,9 +66,3 @@ GOOGLE_API_KEY="your_google_key_here"
 3. Select your preferred AI model from the dropdown
 4. Start chatting!
 
-## Next Upgrades
-- PDF upload
-- MongoDB chat history
-- Pinecone vector DB
-- Streaming responses
-- Local model support (Ollama)
