@@ -1,0 +1,5 @@
+[
+  { "id": 1, "text": "Node.js powers scalable backend systems." },
+  { "id": 2, "text": "React builds dynamic user interfaces." },
+  { "id": 3, "text": "RAG combines retrieval with LLM intelligence." }
+]
